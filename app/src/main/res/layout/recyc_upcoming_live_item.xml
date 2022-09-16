@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/upcoming_live_round">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img_upcoming"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/profile_img" />
+
+        <TextView
+            android:id="@+id/upcoming_live_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_img_upcoming"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/nats_reguler"
+            android:text="Jhon Wyane"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            />
+
+        <ImageView
+            android:id="@+id/calenderImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/upcoming_live_userName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/calender_svg" />
+
+        <TextView
+            android:id="@+id/calenderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upcoming_live_userName"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@id/calenderImg"
+            android:fontFamily="@font/nats_reguler"
+            android:text="09/05/2022"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/clockImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/calenderImg"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/clock_svg" />
+
+        <TextView
+            android:id="@+id/clockText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calenderText"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/clockImg"
+            android:fontFamily="@font/nats_reguler"
+            android:text="2.00pm"
+            android:textColor="@color/black"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/setReminderBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clockImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/set_reminder_gradient_round"
+            android:elevation="5dp"
+            android:fontFamily="@font/nats_reguler"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Set Reminder"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

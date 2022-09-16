@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DashboardFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relate1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/ronald_profile" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/profile"
+                    android:fontFamily="@font/nats_reguler"
+                    android:text="Ronald Richard"
+                    android:textColor="@color/black"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/userEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userName"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="-15dp"
+                    android:layout_toEndOf="@id/profile"
+                    android:fontFamily="@font/nats_reguler"
+                    android:text="ronaldrichard@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/dashboard"
+            android:layout_below="@id/relate1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relatePersonal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/personal_round">
+
+                    <TextView
+                        android:id="@+id/personalText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+                        android:fontFamily="@font/nats"
+                        android:text="Personal Info"
+                        android:textColor="@color/orange"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/personalInfoImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/personalText"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/profile_man"
+                        android:backgroundTint="@color/orange" />
+
+                    <TextView
+                        android:id="@+id/personalDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/personalInfoImg"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Name,Plan,etc"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relateDiet"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/diet_chart_round">
+
+                    <TextView
+                        android:id="@+id/dietChartText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Diet Chart"
+                        android:textColor="@color/violet"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/dietChartImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/dietChartText"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/dietchart" />
+
+                    <TextView
+                        android:id="@+id/dietChartDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dietChartImg"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Plan your diet"
+                        android:textColor="@color/violet"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relateMetrics"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/metrics_round">
+
+                    <TextView
+                        android:id="@+id/metricText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Metrics"
+                        android:textColor="@color/pink"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/metricsImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/metricText"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/metrics" />
+
+                    <TextView
+                        android:id="@+id/metricsDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/metricsImg"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Check progress"
+                        android:textColor="@color/pink"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relateTracker"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/tracker_round">
+
+                    <TextView
+                        android:id="@+id/trackerText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Tracker"
+                        android:textColor="@color/blue"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/trackerImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/trackerText"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/tracker" />
+
+                    <TextView
+                        android:id="@+id/trackerDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/trackerImg"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Teack Meal"
+                        android:textColor="@color/blue"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relateHealth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/health_round">
+
+                    <TextView
+                        android:id="@+id/healthText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Health Details"
+                        android:textColor="@color/green"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/healthImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/healthText"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/health" />
+
+                    <TextView
+                        android:id="@+id/healthDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/healthImg"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Form,Document"
+                        android:textColor="@color/green"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relateChat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/personal_round">
+
+                    <TextView
+                        android:id="@+id/chatsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Chats"
+                        android:textColor="@color/orange"
+                        android:textSize="24sp" />
+
+                    <ImageView
+                        android:id="@+id/chatsImg"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_below="@id/chatsText"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/chats" />
+
+                    <TextView
+                        android:id="@+id/chatsDes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/chatsImg"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/nats_reguler"
+                        android:text="Chat with.."
+                        android:textColor="@color/orange"
+                        android:textSize="20sp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="111dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/text_bg_round"
+                    android:fontFamily="@font/juliussansonereguler"
+                    android:padding="10dp"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="95dp"
+                    android:src="@drawable/textbg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/juliussansonereguler"
+                    android:padding="10dp"
+                    android:text="NEVER GIVE UP GREAT THINGS TAKE TIME."
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/quote"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

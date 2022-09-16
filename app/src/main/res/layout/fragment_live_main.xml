@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.live.LiveMainFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relateLiveTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black">
+
+                <TextView
+                    android:id="@+id/nowStreaming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/nats_reguler"
+                    android:text="Now Streaming Live"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/golive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/live_bg_gradient_blue_violet"
+                    android:fontFamily="@font/nats_reguler"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:text="Go Live"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImg"
+                    android:layout_width="67dp"
+                    android:layout_height="67dp"
+                    android:layout_below="@id/nowStreaming"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/profile_img" />
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nowStreaming"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/profileImg"
+                    android:fontFamily="@font/nats_reguler"
+                    android:text="Jhon Wyane"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                     />
+
+                <TextView
+                    android:id="@+id/userDes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userName"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_toStartOf="@id/golive"
+                    android:lineHeight="10dp"
+                    android:layout_toEndOf="@id/profileImg"
+                    android:fontFamily="@font/nats_reguler"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis."
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyc_viewers"
+                    android:layout_width="96dp"
+                    android:layout_height="27dp"
+                    android:layout_below="@id/userDes"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@id/numberOfUsers"
+                    tools:listitem="@layout/recyc_live_viewers_item" />
+
+                <TextView
+                    android:id="@+id/numberOfUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userDes"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_toStartOf="@id/golive"
+                    android:fontFamily="@font/nats_reguler"
+                    android:text="+ 246 \n viewers"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relateUpcoming"
+                android:layout_below="@id/relateLiveTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/upcomingLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nats_reguler"
+                    android:text="Upcoming Live"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyc_upcoming_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_below="@id/upcomingLive"
+                    tools:listitem="" />
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/liveBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/roundlive"
+        android:elevation="8dp"
+        android:src="@drawable/livevideo" />
+
+</RelativeLayout>
